@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="b9u-zm-Gd3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C47a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eDb-7R-G9A">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Restaraunts Table View Controller-->
+        <!--Restaurant List-->
         <scene sceneID="90W-NR-8yq">
             <objects>
                 <tableViewController id="b9u-zm-Gd3" customClass="RestarauntsTableViewController" customModule="Restaraunts" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="uf2-mt-ZRR" customClass="CustomTableViewCell" customModule="Restaraunts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uf2-mt-ZRR" id="Y7x-EX-l0O">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
@@ -76,6 +76,7 @@
                                     <outlet property="nameLabel" destination="OFq-5C-NbJ" id="bjd-Ap-UKB"/>
                                     <outlet property="thumbnailImageView" destination="2Ud-Uw-f5T" id="yeG-63-LCY"/>
                                     <outlet property="typeLabel" destination="X9U-5P-VOO" id="fvS-XZ-mZ5"/>
+                                    <segue destination="2Hl-p4-oic" kind="show" identifier="showDetail" id="ggJ-zU-h1w"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -84,10 +85,64 @@
                             <outlet property="delegate" destination="b9u-zm-Gd3" id="rD4-EO-BF8"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Restaurant List" id="ncf-9b-fcA"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYI-Ei-gsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="496"/>
+            <point key="canvasLocation" x="792" y="283"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="S4q-wl-qls">
+            <objects>
+                <viewController id="2Hl-p4-oic" customClass="detailViewController" customModule="Restaraunts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wJ9-sN-Hw3"/>
+                        <viewControllerLayoutGuide type="bottom" id="cEI-nS-BdH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iVf-Ol-v93">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IFP-im-tEC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cEI-nS-BdH" firstAttribute="top" secondItem="IFP-im-tEC" secondAttribute="bottom" id="A3f-4a-Evb"/>
+                            <constraint firstAttribute="trailing" secondItem="IFP-im-tEC" secondAttribute="trailing" id="Scc-a5-aGX"/>
+                            <constraint firstItem="IFP-im-tEC" firstAttribute="leading" secondItem="iVf-Ol-v93" secondAttribute="leading" id="YpE-Ez-p81"/>
+                            <constraint firstItem="IFP-im-tEC" firstAttribute="top" secondItem="iVf-Ol-v93" secondAttribute="top" id="fWd-rl-lK5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="restaurantImageView" destination="IFP-im-tEC" id="rP3-0a-qU7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yA4-Z5-sKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1438" y="280"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8zx-Ke-igJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eDb-7R-G9A" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="66D-dy-HqW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b9u-zm-Gd3" kind="relationship" relationship="rootViewController" id="AmK-uZ-GMa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIH-4S-Orn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="283"/>
         </scene>
     </scenes>
 </document>
