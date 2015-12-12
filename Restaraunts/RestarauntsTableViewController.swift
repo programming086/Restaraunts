@@ -10,6 +10,7 @@ import UIKit
 
 class RestarauntsTableViewController: UITableViewController {
 
+    
     var restaurants: [Restaurant] = [Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "Hong Kong", image: "cafedeadend.jpg", isVisited: false),
         Restaurant(name: "Homei", type: "Cafe", location: "Hong Kong", image: "homei.jpg", isVisited: false),
         Restaurant(name: "Teakha", type: "Tea House", location: "Hong Kong", image: "teakha.jpg", isVisited: false),
@@ -35,11 +36,10 @@ class RestarauntsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+            
+            // Remove the title of the back button
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,7 +103,7 @@ class RestarauntsTableViewController: UITableViewController {
         optionMenu.addAction(cancelAction)
         optionMenu.addAction(callAction)
         optionMenu.addAction(isVisitedAction)
-        self.presentViewController(optionMenu, animated: true, completion: nil)
+//        self.presentViewController(optionMenu, animated: true, completion: nil)
         
     }
    
@@ -134,11 +134,20 @@ class RestarauntsTableViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destinationViewController as! detailViewController
-                destinationController.restaurantImage = restaurants[indexPath.row].image
+                destinationController.restaurant = restaurants[indexPath.row]
             }
         
         }
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
+        prefersStatusBarHidden()
+    }
+    
+    
     
     /*
     // Override to support rearranging the table view.

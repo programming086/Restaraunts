@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A425BE91C0B27D30098786D /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A425BE81C0B27D30098786D /* Restaurant.swift */; };
+		0A939C801C0DD5D500F80504 /* RestaurantDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A939C7F1C0DD5D500F80504 /* RestaurantDetailCell.swift */; };
 		0ACDCC5F1BFE308B008FE32A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDCC5E1BFE308B008FE32A /* AppDelegate.swift */; };
 		0ACDCC641BFE308C008FE32A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDCC621BFE308C008FE32A /* Main.storyboard */; };
 		0ACDCC661BFE308C008FE32A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDCC651BFE308C008FE32A /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		0A425BE81C0B27D30098786D /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		0A939C7F1C0DD5D500F80504 /* RestaurantDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailCell.swift; sourceTree = "<group>"; };
 		0ACDCC5B1BFE308B008FE32A /* Restaraunts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaraunts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACDCC5E1BFE308B008FE32A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ACDCC631BFE308C008FE32A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				0ACDCC5E1BFE308B008FE32A /* AppDelegate.swift */,
 				0ACDCC621BFE308C008FE32A /* Main.storyboard */,
+				0A939C7F1C0DD5D500F80504 /* RestaurantDetailCell.swift */,
 				0AE686B71C0851A300E6B408 /* detailViewController.swift */,
 				0ACDCC721BFE3820008FE32A /* CustomTableViewCell.swift */,
 				0ACDCC701BFE31A4008FE32A /* RestarauntsTableViewController.swift */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A425BE91C0B27D30098786D /* Restaurant.swift in Sources */,
+				0A939C801C0DD5D500F80504 /* RestaurantDetailCell.swift in Sources */,
 				0ACDCC731BFE3820008FE32A /* CustomTableViewCell.swift in Sources */,
 				0ACDCC711BFE31A4008FE32A /* RestarauntsTableViewController.swift in Sources */,
 				0ACDCC5F1BFE308B008FE32A /* AppDelegate.swift in Sources */,
