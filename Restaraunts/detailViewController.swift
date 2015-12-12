@@ -8,19 +8,31 @@
 
 import UIKit
 
-class detailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var restaurantImageView: UIImageView!
-    var restaurant = Restaurant(name: "", type: "", location: "", image: "", isVisited: false)
+    @IBOutlet var tableView:UITableView!
+    var restaurant: Restaurant!
     
     var restaurantImage = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        title = restaurant.name
+        // Дополнительные действия после загрузки view
         restaurantImageView.image = UIImage(named: restaurant.image)
+        
+        // Сменить цвет TableView
+        tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
+        
+        // Убрать разделители пустых ячеек
+        tableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        // Сменить цвет разделителей
+        tableView.separatorColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
+        
+        // Сменить title в navigationBar
+        title = restaurant.name
         
     }
 
@@ -32,12 +44,13 @@ class detailViewController: UIViewController, UITableViewDataSource, UITableView
     //Data Source Protocol
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! RestaurantDetailCell
         
+        // Настройка ячейки
         switch indexPath.row {
         case 0:
             cell.fieldLabel.text = "Name"
@@ -49,6 +62,9 @@ class detailViewController: UIViewController, UITableViewDataSource, UITableView
             cell.fieldLabel.text = "Location"
             cell.valueLabel.text = restaurant.location
         case 3:
+            cell.fieldLabel.text = "Phone"
+            cell.valueLabel.text = restaurant.phoneNumber
+        case 4:
             cell.fieldLabel.text = "Been here"
             cell.valueLabel.text = (restaurant.isVisited) ? "Yes" : "No"
         default:
@@ -56,8 +72,11 @@ class detailViewController: UIViewController, UITableViewDataSource, UITableView
             cell.valueLabel.text = ""
         }
         
+        cell.backgroundColor = UIColor.clearColor()
+        
         return cell
     }
+
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)

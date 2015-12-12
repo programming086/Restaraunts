@@ -12,4 +12,15 @@ class RestaurantDetailCell: UITableViewCell {
     @IBOutlet var fieldLabel: UILabel!
     @IBOutlet var valueLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Код инициализации
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Настройка вида для режима "выбранного"
+    }
 }
+

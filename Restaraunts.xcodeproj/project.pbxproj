@@ -15,7 +15,7 @@
 		0ACDCC691BFE308C008FE32A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDCC671BFE308C008FE32A /* LaunchScreen.storyboard */; };
 		0ACDCC711BFE31A4008FE32A /* RestarauntsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDCC701BFE31A4008FE32A /* RestarauntsTableViewController.swift */; };
 		0ACDCC731BFE3820008FE32A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDCC721BFE3820008FE32A /* CustomTableViewCell.swift */; };
-		0AE686B81C0851A300E6B408 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE686B71C0851A300E6B408 /* detailViewController.swift */; };
+		0AE686B81C0851A300E6B408 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE686B71C0851A300E6B408 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		0ACDCC6A1BFE308C008FE32A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ACDCC701BFE31A4008FE32A /* RestarauntsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestarauntsTableViewController.swift; sourceTree = "<group>"; };
 		0ACDCC721BFE3820008FE32A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		0AE686B71C0851A300E6B408 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		0AE686B71C0851A300E6B408 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +43,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A1A3B671C11FD03008787AD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0A939C7F1C0DD5D500F80504 /* RestaurantDetailCell.swift */,
+				0AE686B71C0851A300E6B408 /* DetailViewController.swift */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		0A1A3B681C11FD1B008787AD /* MainTable */ = {
+			isa = PBXGroup;
+			children = (
+				0ACDCC721BFE3820008FE32A /* CustomTableViewCell.swift */,
+				0ACDCC701BFE31A4008FE32A /* RestarauntsTableViewController.swift */,
+			);
+			name = MainTable;
+			sourceTree = "<group>";
+		};
 		0ACDCC521BFE308A008FE32A = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +82,8 @@
 			children = (
 				0ACDCC5E1BFE308B008FE32A /* AppDelegate.swift */,
 				0ACDCC621BFE308C008FE32A /* Main.storyboard */,
-				0A939C7F1C0DD5D500F80504 /* RestaurantDetailCell.swift */,
-				0AE686B71C0851A300E6B408 /* detailViewController.swift */,
-				0ACDCC721BFE3820008FE32A /* CustomTableViewCell.swift */,
-				0ACDCC701BFE31A4008FE32A /* RestarauntsTableViewController.swift */,
+				0A1A3B671C11FD03008787AD /* Detail */,
+				0A1A3B681C11FD1B008787AD /* MainTable */,
 				0A425BE81C0B27D30098786D /* Restaurant.swift */,
 				0ACDCC651BFE308C008FE32A /* Assets.xcassets */,
 				0ACDCC671BFE308C008FE32A /* LaunchScreen.storyboard */,
@@ -152,7 +168,7 @@
 				0ACDCC731BFE3820008FE32A /* CustomTableViewCell.swift in Sources */,
 				0ACDCC711BFE31A4008FE32A /* RestarauntsTableViewController.swift in Sources */,
 				0ACDCC5F1BFE308B008FE32A /* AppDelegate.swift in Sources */,
-				0AE686B81C0851A300E6B408 /* detailViewController.swift in Sources */,
+				0AE686B81C0851A300E6B408 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
