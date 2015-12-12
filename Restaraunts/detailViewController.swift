@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var rateButton: UIButton!
     @IBOutlet var restaurantImageView: UIImageView!
     @IBOutlet var tableView:UITableView!
     var restaurant: Restaurant!
@@ -86,5 +87,13 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    @IBAction func close(segue: UIStoryboardSegue) {
+        if let retingVC = segue.sourceViewController as? RateViewController {
+            if let rating = retingVC.rating {
+                rateButton.setImage(UIImage(named: rating), forState: UIControlState.Normal)
+            }
+        }
     }
 }

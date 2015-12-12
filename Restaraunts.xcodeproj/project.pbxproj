@@ -16,6 +16,7 @@
 		0ACDCC711BFE31A4008FE32A /* RestarauntsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDCC701BFE31A4008FE32A /* RestarauntsTableViewController.swift */; };
 		0ACDCC731BFE3820008FE32A /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDCC721BFE3820008FE32A /* CustomTableViewCell.swift */; };
 		0AE686B81C0851A300E6B408 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE686B71C0851A300E6B408 /* DetailViewController.swift */; };
+		0AE696831C14CA40001D2224 /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE696821C14CA40001D2224 /* RateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0ACDCC701BFE31A4008FE32A /* RestarauntsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestarauntsTableViewController.swift; sourceTree = "<group>"; };
 		0ACDCC721BFE3820008FE32A /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		0AE686B71C0851A300E6B408 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0AE696821C14CA40001D2224 /* RateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				0ACDCC5E1BFE308B008FE32A /* AppDelegate.swift */,
 				0ACDCC621BFE308C008FE32A /* Main.storyboard */,
+				0AE696821C14CA40001D2224 /* RateViewController.swift */,
 				0A1A3B671C11FD03008787AD /* Detail */,
 				0A1A3B681C11FD1B008787AD /* MainTable */,
 				0A425BE81C0B27D30098786D /* Restaurant.swift */,
@@ -169,6 +172,7 @@
 				0ACDCC711BFE31A4008FE32A /* RestarauntsTableViewController.swift in Sources */,
 				0ACDCC5F1BFE308B008FE32A /* AppDelegate.swift in Sources */,
 				0AE686B81C0851A300E6B408 /* DetailViewController.swift in Sources */,
+				0AE696831C14CA40001D2224 /* RateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
