@@ -69,7 +69,7 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3X-TJ-Fbd">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3X-TJ-Fbd">
                                                             <rect key="frame" x="0.0" y="21" width="55" height="17"/>
                                                             <animations/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -94,6 +94,8 @@
                                     <constraints>
                                         <constraint firstItem="QFK-Hk-gmj" firstAttribute="top" secondItem="dN2-W5-4jX" secondAttribute="topMargin" constant="2" id="5sG-vV-W5T"/>
                                         <constraint firstItem="QFK-Hk-gmj" firstAttribute="leading" secondItem="dN2-W5-4jX" secondAttribute="leadingMargin" constant="6" id="Qgz-sS-1w0"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wCb-U0-DiG" secondAttribute="bottom" constant="6" id="aAW-A2-h0V"/>
+                                        <constraint firstItem="wCb-U0-DiG" firstAttribute="top" secondItem="dN2-W5-4jX" secondAttribute="topMargin" constant="2" id="lfe-Q0-unP"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="QFK-Hk-gmj" secondAttribute="bottom" constant="1.5" id="vR6-S2-vfv"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="QFK-Hk-gmj" secondAttribute="trailing" id="zM6-Pl-OgD"/>
                                     </constraints>
@@ -158,7 +160,7 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBv-iY-0JK">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBv-iY-0JK">
                                                             <rect key="frame" x="193" y="0.0" width="386" height="20"/>
                                                             <animations/>
                                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
@@ -177,6 +179,8 @@
                                                 <constraint firstItem="1WJ-8d-Dky" firstAttribute="leading" secondItem="Xbt-TD-VFJ" secondAttribute="leadingMargin" constant="5" id="HIH-fE-su3"/>
                                                 <constraint firstItem="1WJ-8d-Dky" firstAttribute="centerY" secondItem="Xbt-TD-VFJ" secondAttribute="centerY" id="Xkz-uU-JGV"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="1WJ-8d-Dky" secondAttribute="trailing" id="Xui-HH-kBD"/>
+                                                <constraint firstAttribute="topMargin" secondItem="1WJ-8d-Dky" secondAttribute="top" id="bk6-ba-Hbv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1WJ-8d-Dky" secondAttribute="bottom" constant="-1" id="mSZ-Vz-7Wc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>

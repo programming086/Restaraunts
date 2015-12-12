@@ -34,6 +34,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         // Сменить title в navigationBar
         title = restaurant.name
         
+        // Самомасштабирование
+        tableView.estimatedRowHeight = 36.0
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
