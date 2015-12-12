@@ -50,18 +50,13 @@ class RestarauntsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CustomTableViewCell
+       
         cell.thumbnailImageView?.image = UIImage(named: restaurantImages[indexPath.row])
         cell.nameLabel?.text = restaurantsNames[indexPath.row]
         cell.typeLabel?.text = restaurantTypes[indexPath.row]
         cell.locationLabel?.text = restaurantLocations[indexPath.row]
-        
-        if restaurantIsVisited[indexPath.row] {
-            cell.accessoryType = .Checkmark
-        } else {
-            cell.accessoryType = .None
-        }
-        
-        
+        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .Checkmark : .None
+  
         cell.thumbnailImageView.layer.cornerRadius = 10.0
         cell.thumbnailImageView.clipsToBounds = true
 
@@ -71,12 +66,17 @@ class RestarauntsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let optionMenu = UIAlertController(title: nil, message: "Что вы хотите сделать?", preferredStyle: .ActionSheet)
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-        let isVisitedAction = UIAlertAction(title: "Я был здесь", style: .Default, handler: {
+       
+        let isVisitedTitle = (restaurantIsVisited[indexPath.row]) ? "Я тут не был" : "Я был тут"
+        
+        let isVisitedAction = UIAlertAction(title: isVisitedTitle, style: .Default, handler: {
             (action: UIAlertAction!) -> Void in
             
             let cell = tableView.cellForRowAtIndexPath(indexPath)
-            cell?.accessoryType = .Checkmark
-            self.restaurantIsVisited[indexPath.row] = true
+            
+            self.restaurantIsVisited[indexPath.row] = (self.restaurantIsVisited[indexPath.row]) ? false : true
+            
+            cell?.accessoryType = (self.restaurantIsVisited[indexPath.row]) ? .Checkmark : .None
         })
         
         let callActionHandler = { (action: UIAlertAction!) -> Void in
