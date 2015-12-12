@@ -11,8 +11,11 @@ import UIKit
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var rateButton: UIButton!
+    
     @IBOutlet var restaurantImageView: UIImageView!
+    
     @IBOutlet var tableView:UITableView!
+    
     var restaurant: Restaurant!
     
     var restaurantImage = ""
@@ -38,15 +41,26 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         // Самомасштабирование
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // Послать рейтинг ресторану ***
+        if restaurant.rating != "" {
+            rateButton.setImage(UIImage(named: restaurant.rating), forState: UIControlState.Normal)
+        }
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     //Data Source Protocol
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -81,22 +95,17 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
 
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.hidesBarsOnSwipe = false
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
     @IBAction func close(segue: UIStoryboardSegue) {
         if let retingVC = segue.sourceViewController as? RateViewController {
             if let rating = retingVC.rating {
+                restaurant.rating = rating //***
                 rateButton.setImage(UIImage(named: rating), forState: UIControlState.Normal)
             }
         }
     }
     
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showMap" {
             let destinationViewController = segue.destinationViewController as! MapViewController
