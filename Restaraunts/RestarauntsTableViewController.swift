@@ -147,4 +147,8 @@ class RestarauntsTableViewController: UITableViewController {
         prefersStatusBarHidden()
     }
     
+    @IBAction func unwindToRestaurants(segue: UIStoryboardSegue) {
+        
+    }
+    
 }
