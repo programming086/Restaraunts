@@ -24,7 +24,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
 
         // Дополнительные действия после загрузки view
-        restaurantImageView.image = UIImage(named: restaurant.image)
+        restaurantImageView.image = UIImage(data: restaurant.image!)
         
         // Сменить цвет TableView
         tableView.backgroundColor = UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
@@ -43,8 +43,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.rowHeight = UITableViewAutomaticDimension
         
         // Послать рейтинг ресторану ***
-        if restaurant.rating != "" {
-            rateButton.setImage(UIImage(named: restaurant.rating), forState: UIControlState.Normal)
+        if let rating = restaurant.rating where rating != "" {
+            rateButton.setImage(UIImage(named: restaurant.rating!), forState: UIControlState.Normal)
         }
     }
 
@@ -84,7 +84,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             cell.valueLabel.text = restaurant.phoneNumber
         case 4:
             cell.fieldLabel.text = "Been here"
-            cell.valueLabel.text = (restaurant.isVisited) ? "Yes" : "No"
+            if let isVisited = restaurant.isVisited?.boolValue {
+            cell.valueLabel.text = isVisited ? "Yes" : "No"
+            }
         default:
             cell.fieldLabel.text = ""
             cell.valueLabel.text = ""

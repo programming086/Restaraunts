@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddRestaurantTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 //*** Этот класс мы полностью настроили на запись/прием введенной информации. *** Первым делом добавим аутлеты для всех объектов взаимодействия
@@ -17,6 +18,8 @@ class AddRestaurantTableViewController: UITableViewController, UIImagePickerCont
     @IBOutlet var locationTextField:UITextField!
     @IBOutlet var yesButton:UIButton!
     @IBOutlet var noButton:UIButton!
+    
+    var restaurant: Restaurant!
     
     var isVisited = true
     
@@ -68,12 +71,25 @@ class AddRestaurantTableViewController: UITableViewController, UIImagePickerCont
             return
         }
         
-        // Вывод введенных данных в консоль
-        print("Name: \(name)")
-        print("Type: \(type)")
-        print("Location: \(location)")
-        print("Have you been here: \(isVisited)")
-        
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext {
+            restaurant = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: managedObjectContext) as! Restaurant
+            
+            restaurant.name = name!
+            restaurant.type = type!
+            restaurant.location = location!
+            if let restaurantImage = imageView.image {
+                restaurant.image = UIImagePNGRepresentation(restaurantImage)
+            }
+            restaurant.isVisited = isVisited
+            
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print(error)
+                return
+            }
+        }
+
         dismissViewControllerAnimated(true, completion: nil)
     }
     
