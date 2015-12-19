@@ -56,25 +56,6 @@
             </objects>
             <point key="canvasLocation" x="1547" y="977"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="oKu-Ik-Jms">
-            <objects>
-                <viewController id="qHP-Eq-zju" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Hgm-WC-HmG"/>
-                        <viewControllerLayoutGuide type="bottom" id="nnj-RL-Rf0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vTW-xl-zFO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="J4r-1H-j7W"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xu2-cj-2NO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1547" y="1703"/>
-        </scene>
         <!--About-->
         <scene sceneID="ngP-zX-eaZ">
             <objects>
@@ -85,12 +66,114 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="qHP-Eq-zju" kind="relationship" relationship="rootViewController" id="3EH-WL-mm2"/>
+                        <segue destination="jcu-5N-O2s" kind="relationship" relationship="rootViewController" id="0mE-ry-fNb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STo-h0-WML" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="895" y="1703"/>
+        </scene>
+        <!--About Table View Controller-->
+        <scene sceneID="xqt-wA-Sj3">
+            <objects>
+                <tableViewController id="jcu-5N-O2s" customClass="AboutTableViewController" customModule="Restaraunts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Fkj-5D-PTc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="6ro-Qb-9PS">
+                            <rect key="frame" x="0.0" y="64" width="600" height="150"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qSb-oA-464">
+                                    <rect key="frame" x="122" y="11" width="357" height="128"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Sz1-gE-pTx">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="128" id="i12-Og-DvV"/>
+                                                <constraint firstAttribute="height" constant="128" id="xPY-vX-NQ0"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just Dev Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocE-mh-GTR">
+                                            <rect key="frame" x="138" y="47" width="219" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="219" id="Rzx-w5-1z3"/>
+                                                <constraint firstAttribute="height" constant="34" id="t8h-uK-ZMu"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="128" id="hHR-uh-j9O"/>
+                                        <constraint firstAttribute="width" constant="357" id="iIg-XL-4Yh"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="qSb-oA-464" firstAttribute="centerX" secondItem="6ro-Qb-9PS" secondAttribute="centerX" id="9Tm-5k-TTt"/>
+                                <constraint firstItem="qSb-oA-464" firstAttribute="centerY" secondItem="6ro-Qb-9PS" secondAttribute="centerY" id="mQN-KU-wEf"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="IK9-gd-wKb">
+                                <rect key="frame" x="0.0" y="242" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IK9-gd-wKb" id="ajN-Hf-LIN">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jcu-5N-O2s" id="qc1-QM-ZAz"/>
+                            <outlet property="delegate" destination="jcu-5N-O2s" id="nRL-8d-5yi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="gLl-hJ-Ntm"/>
+                    <connections>
+                        <segue destination="r9w-Xx-A7t" kind="show" identifier="showWebView" id="1Zb-yA-28f"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pvi-an-ptj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1554" y="1705"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="xuP-Dn-uyg">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="r9w-Xx-A7t" customClass="WebViewController" customModule="Restaraunts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oif-4z-Wfd"/>
+                        <viewControllerLayoutGuide type="bottom" id="rCm-G1-r90"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qST-Eu-d04">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcH-MO-KQq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kcH-MO-KQq" firstAttribute="top" secondItem="qST-Eu-d04" secondAttribute="top" id="87h-7F-Hz5"/>
+                            <constraint firstItem="kcH-MO-KQq" firstAttribute="leading" secondItem="qST-Eu-d04" secondAttribute="leading" id="9hc-S8-lOF"/>
+                            <constraint firstAttribute="trailing" secondItem="kcH-MO-KQq" secondAttribute="trailing" id="GdH-Bh-tpg"/>
+                            <constraint firstItem="rCm-G1-r90" firstAttribute="top" secondItem="kcH-MO-KQq" secondAttribute="bottom" id="enC-8h-foG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="kcH-MO-KQq" id="kod-xX-G7H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgX-Mu-WYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2206" y="1705"/>
         </scene>
         <!--Discover-->
         <scene sceneID="Nbo-RR-vYE">
@@ -470,7 +553,7 @@
         <!--Map View Controller-->
         <scene sceneID="XpD-Vt-6hv">
             <objects>
-                <viewController id="SCJ-yv-YlR" customClass="MapViewController" customModule="Restaraunts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="SCJ-yv-YlR" customClass="MapViewController" customModule="Restaraunts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ShO-hk-ThS"/>
                         <viewControllerLayoutGuide type="bottom" id="xMJ-AK-7g4"/>
@@ -480,7 +563,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wuF-Hq-V5J">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -502,7 +585,7 @@
         <!--Detail View Controller-->
         <scene sceneID="nQv-iP-tdU">
             <objects>
-                <viewController id="LQU-AI-S0Y" customClass="DetailViewController" customModule="Restaraunts" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="LQU-AI-S0Y" customClass="DetailViewController" customModule="Restaraunts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ebj-Mh-vKb"/>
                         <viewControllerLayoutGuide type="bottom" id="CkO-56-GiO"/>
@@ -781,6 +864,7 @@
         <image name="fiveleaves" width="640" height="640"/>
         <image name="good" width="256" height="256"/>
         <image name="great" width="256" height="256"/>
+        <image name="mainLogo" width="1024" height="1024"/>
         <image name="map" width="48" height="48"/>
         <image name="photoalbum" width="84" height="84"/>
         <image name="rating" width="256" height="256"/>
