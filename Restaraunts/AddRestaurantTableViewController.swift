@@ -108,4 +108,5 @@ class AddRestaurantTableViewController: UITableViewController, UIImagePickerCont
             noButton.backgroundColor = UIColor(red: 235.0/255.0, green: 73.0/255.0, blue: 27.0/255.0, alpha: 1.0)
         }
     }
+    
 }

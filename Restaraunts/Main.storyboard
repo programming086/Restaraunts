@@ -26,23 +26,22 @@
             </objects>
             <point key="canvasLocation" x="906" y="283"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Discovery-->
         <scene sceneID="WGA-v3-rBY">
             <objects>
                 <tableViewController id="nG7-9o-wVc" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xvc-J2-JLB">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="219" sectionHeaderHeight="28" sectionFooterHeight="28" id="xvc-J2-JLB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="id" id="j6B-2T-qgX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="44" id="j6B-2T-qgX" customClass="DiscoverTableViewCell" customModule="Restaraunts" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j6B-2T-qgX" id="RyX-vg-Ayp">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,7 +49,7 @@
                             <outlet property="delegate" destination="nG7-9o-wVc" id="tDK-Pl-Nlj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="rym-0W-6XF"/>
+                    <navigationItem key="navigationItem" title="Discovery" id="rym-0W-6XF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQr-Ww-bRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,7 +101,7 @@
                                                 <constraint firstAttribute="height" constant="34" id="t8h-uK-ZMu"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
