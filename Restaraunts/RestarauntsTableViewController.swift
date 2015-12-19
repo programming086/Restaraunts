@@ -183,7 +183,7 @@ class RestarauntsTableViewController: UITableViewController, NSFetchedResultsCon
         
     }
     
-    // ====
+    // ==== 
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         if let searchText = searchController.searchBar.text {
@@ -200,5 +200,25 @@ class RestarauntsTableViewController: UITableViewController, NSFetchedResultsCon
             return nameMatch != nil || locationMatch != nil
         })
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }

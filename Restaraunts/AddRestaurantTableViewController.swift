@@ -16,6 +16,7 @@ class AddRestaurantTableViewController: UITableViewController, UIImagePickerCont
     @IBOutlet var nameTextField:UITextField!
     @IBOutlet var typeTextField:UITextField!
     @IBOutlet var locationTextField:UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet var yesButton:UIButton!
     @IBOutlet var noButton:UIButton!
     
@@ -61,6 +62,7 @@ class AddRestaurantTableViewController: UITableViewController, UIImagePickerCont
         let name = nameTextField.text
         let type = typeTextField.text
         let location = locationTextField.text
+        let phone = phoneTextField.text
         
         // Проверка на валидность введенных строк
         if name == "" || type == "" || location == "" {
@@ -77,6 +79,7 @@ class AddRestaurantTableViewController: UITableViewController, UIImagePickerCont
             restaurant.name = name!
             restaurant.type = type!
             restaurant.location = location!
+            restaurant.phoneNumber = phone!
             if let restaurantImage = imageView.image {
                 restaurant.image = UIImagePNGRepresentation(restaurantImage)
             }
