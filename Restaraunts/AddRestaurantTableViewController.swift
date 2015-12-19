@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CloudKit
 
 class AddRestaurantTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 //*** Этот класс мы полностью настроили на запись/прием введенной информации. *** Первым делом добавим аутлеты для всех объектов взаимодействия
@@ -94,6 +95,8 @@ class AddRestaurantTableViewController: UITableViewController, UIImagePickerCont
         }
 
         dismissViewControllerAnimated(true, completion: nil)
+        
+        saveRecordToCloud(restaurant)
     }
     
     @IBAction func toggleBeenHereButton(sender: UIButton) {
@@ -107,6 +110,41 @@ class AddRestaurantTableViewController: UITableViewController, UIImagePickerCont
             yesButton.backgroundColor = UIColor.grayColor()
             noButton.backgroundColor = UIColor(red: 235.0/255.0, green: 73.0/255.0, blue: 27.0/255.0, alpha: 1.0)
         }
+    }
+    
+    func saveRecordToCloud(restaurant: Restaurant!) -> Void {
+        //prepare
+        let record = CKRecord(recordType: "Restaurant")
+        record.setValue(restaurant.name, forKey: "name")
+        record.setValue(restaurant.type, forKey: "type")
+        record.setValue(restaurant.location, forKey: "location")
+        record.setValue(restaurant.phoneNumber, forKey: "phoneNumber")
+        
+        //resize image
+        let originalImage = UIImage(data: restaurant.image!)!
+        let scalingFactor = (originalImage.size.width > 1024) ? 1024 / originalImage.size.width : 1.0
+        let scaledImage = UIImage(data:  restaurant.image!, scale:  scalingFactor)!
+        
+        //tmp use
+        let imageFilePath = NSTemporaryDirectory() + restaurant.name
+        UIImageJPEGRepresentation(scaledImage, 0.8)?.writeToFile(imageFilePath, atomically: true)
+        
+        //creating asset
+        let imageFileURL = NSURL(fileURLWithPath: imageFilePath)
+        let imageAsset = CKAsset(fileURL: imageFileURL)
+        record.setValue(imageAsset, forKey: "photo")
+        
+        let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
+        
+        publicDatabase.saveRecord(record, completionHandler: { (record: CKRecord?, error: NSError?) -> Void in
+            //remove tmp
+            do {
+                try NSFileManager.defaultManager().removeItemAtPath(imageFilePath)
+            } catch {
+                print("saving error")
+            }
+        })
+
     }
     
 }

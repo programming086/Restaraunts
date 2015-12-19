@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A733AFC1C219191005E693E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A733AFB1C219190005E693E /* CloudKit.framework */; };
+		0A733AFE1C220120005E693E /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A733AFD1C220120005E693E /* DiscoverTableViewController.swift */; };
+		0A733B001C22E935005E693E /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A733AFF1C22E935005E693E /* DiscoverTableViewCell.swift */; };
 		0A939C801C0DD5D500F80504 /* RestaurantDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A939C7F1C0DD5D500F80504 /* RestaurantDetailCell.swift */; };
 		0AC8A8641C1984FF002D141F /* Restaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8A8621C1984FF002D141F /* Restaurant.xcdatamodeld */; };
 		0AC8A86E1C1AF350002D141F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8A86D1C1AF350002D141F /* Restaurant.swift */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		0A733AFA1C21917B005E693E /* Restaraunts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Restaraunts.entitlements; sourceTree = "<group>"; };
 		0A733AFB1C219190005E693E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		0A733AFD1C220120005E693E /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		0A733AFF1C22E935005E693E /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		0A939C7F1C0DD5D500F80504 /* RestaurantDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailCell.swift; sourceTree = "<group>"; };
 		0AC8A8631C1984FF002D141F /* Restaurant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Restaurant.xcdatamodel; sourceTree = "<group>"; };
 		0AC8A86D1C1AF350002D141F /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				0A733AFA1C21917B005E693E /* Restaraunts.entitlements */,
 				0ACDCC5E1BFE308B008FE32A /* AppDelegate.swift */,
 				0AE3227F1C1D77CD007B2B60 /* Main.storyboard */,
+				0A733AFD1C220120005E693E /* DiscoverTableViewController.swift */,
+				0A733AFF1C22E935005E693E /* DiscoverTableViewCell.swift */,
 				0AE322A61C1EEE54007B2B60 /* WebViewController.swift */,
 				0AE322A41C1EBAF1007B2B60 /* AboutTableViewController.swift */,
 				0AE696921C16E49C001D2224 /* AddRestaurantTableViewController.swift */,
@@ -208,9 +214,11 @@
 				0ACDCC731BFE3820008FE32A /* CustomTableViewCell.swift in Sources */,
 				0ACDCC711BFE31A4008FE32A /* RestarauntsTableViewController.swift in Sources */,
 				0AE322A71C1EEE54007B2B60 /* WebViewController.swift in Sources */,
+				0A733AFE1C220120005E693E /* DiscoverTableViewController.swift in Sources */,
 				0ACDCC5F1BFE308B008FE32A /* AppDelegate.swift in Sources */,
 				0AE686B81C0851A300E6B408 /* DetailViewController.swift in Sources */,
 				0AE696831C14CA40001D2224 /* RateViewController.swift in Sources */,
+				0A733B001C22E935005E693E /* DiscoverTableViewCell.swift in Sources */,
 				0AE6968B1C15F2AE001D2224 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
