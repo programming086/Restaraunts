@@ -11,6 +11,8 @@
 		0A733AFE1C220120005E693E /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A733AFD1C220120005E693E /* DiscoverTableViewController.swift */; };
 		0A733B001C22E935005E693E /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A733AFF1C22E935005E693E /* DiscoverTableViewCell.swift */; };
 		0A939C801C0DD5D500F80504 /* RestaurantDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A939C7F1C0DD5D500F80504 /* RestaurantDetailCell.swift */; };
+		0AB760321C26C4AB005C46A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AB760341C26C4AB005C46A1 /* InfoPlist.strings */; };
+		0AB760381C26C4AB005C46A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AB7603A1C26C4AB005C46A1 /* Localizable.strings */; };
 		0AC8A8641C1984FF002D141F /* Restaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8A8621C1984FF002D141F /* Restaurant.xcdatamodeld */; };
 		0AC8A86E1C1AF350002D141F /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8A86D1C1AF350002D141F /* Restaurant.swift */; };
 		0AC8A8761C1B0481002D141F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC8A8751C1B0481002D141F /* Assets.xcassets */; };
@@ -34,6 +36,9 @@
 		0A733AFD1C220120005E693E /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		0A733AFF1C22E935005E693E /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		0A939C7F1C0DD5D500F80504 /* RestaurantDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailCell.swift; sourceTree = "<group>"; };
+		0AB760331C26C4AB005C46A1 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0AB760351C26C4AB005C46A1 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0AB760391C26C4AB005C46A1 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0AC8A8631C1984FF002D141F /* Restaurant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Restaurant.xcdatamodel; sourceTree = "<group>"; };
 		0AC8A86D1C1AF350002D141F /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		0AC8A8751C1B0481002D141F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +110,8 @@
 		0ACDCC5D1BFE308B008FE32A /* Restaraunts */ = {
 			isa = PBXGroup;
 			children = (
+				0AB7603A1C26C4AB005C46A1 /* Localizable.strings */,
+				0AB760341C26C4AB005C46A1 /* InfoPlist.strings */,
 				0A733AFA1C21917B005E693E /* Restaraunts.entitlements */,
 				0ACDCC5E1BFE308B008FE32A /* AppDelegate.swift */,
 				0AE3227F1C1D77CD007B2B60 /* Main.storyboard */,
@@ -193,7 +200,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB760381C26C4AB005C46A1 /* Localizable.strings in Resources */,
 				0AE322801C1D77CD007B2B60 /* Main.storyboard in Resources */,
+				0AB760321C26C4AB005C46A1 /* InfoPlist.strings in Resources */,
 				0ACDCC691BFE308C008FE32A /* LaunchScreen.storyboard in Resources */,
 				0AC8A8761C1B0481002D141F /* Assets.xcassets in Resources */,
 			);
@@ -226,10 +235,27 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0AB760341C26C4AB005C46A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AB760331C26C4AB005C46A1 /* zh */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0AB7603A1C26C4AB005C46A1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AB760391C26C4AB005C46A1 /* zh */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		0ACDCC671BFE308C008FE32A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0ACDCC681BFE308C008FE32A /* Base */,
+				0AB760351C26C4AB005C46A1 /* zh */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

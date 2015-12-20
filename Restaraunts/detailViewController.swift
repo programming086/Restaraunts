@@ -71,21 +71,21 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         // Настройка ячейки
         switch indexPath.row {
         case 0:
-            cell.fieldLabel.text = "Name"
+            cell.fieldLabel.text = NSLocalizedString("Name", comment: "Name field")
             cell.valueLabel.text = restaurant.name
         case 1:
-            cell.fieldLabel.text = "Type"
+            cell.fieldLabel.text = NSLocalizedString("Type", comment: "Type field")
             cell.valueLabel.text = restaurant.type
         case 2:
-            cell.fieldLabel.text = "Location"
+            cell.fieldLabel.text = NSLocalizedString("Location", comment: "Location field")
             cell.valueLabel.text = restaurant.location
         case 3:
-            cell.fieldLabel.text = "Phone"
+            cell.fieldLabel.text = NSLocalizedString("Phone", comment: "Phone field")
             cell.valueLabel.text = restaurant.phoneNumber
         case 4:
-            cell.fieldLabel.text = "Been here"
+            cell.fieldLabel.text = NSLocalizedString("Been here", comment: "Been here field")
             if let isVisited = restaurant.isVisited?.boolValue {
-            cell.valueLabel.text = isVisited ? "Yes" : "No"
+            cell.valueLabel.text = isVisited ? NSLocalizedString("Yes", comment: "Yes answer") : NSLocalizedString("No", comment: "No answer")
             }
         default:
             cell.fieldLabel.text = ""

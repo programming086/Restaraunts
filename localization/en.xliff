@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Restaraunts/Base.lproj/LaunchScreen.storyboard" source-language="en" target-language="zh" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.2" build-num="7C68"/>
+    </header>
+    <body/>
+  </file>
+  <file original="Restaraunts/Info.plist" source-language="en" target-language="zh" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.2" build-num="7C68"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Restaraunts/Localizable.strings" source-language="en" target-language="zh" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="7.2" build-num="7C68"/>
+    </header>
+    <body>
+      <trans-unit id="Been here">
+        <source>Been here</source>
+        <target>來過這裡</target>
+        <note>Been here field</note>
+      </trans-unit>
+      <trans-unit id="Location">
+        <source>Location</source>
+        <target>位置</target>
+        <note>Location field</note>
+      </trans-unit>
+      <trans-unit id="Name">
+        <source>Name</source>
+        <target>名稱</target>
+        <note>Name field</note>
+      </trans-unit>
+      <trans-unit id="No">
+        <source>No</source>
+        <target>沒有</target>
+        <note>No answer</note>
+      </trans-unit>
+      <trans-unit id="Phone">
+        <source>Phone</source>
+        <target>電話</target>
+        <note>Phone field</note>
+      </trans-unit>
+      <trans-unit id="Type">
+        <source>Type</source>
+        <target>類型</target>
+        <note>Type field</note>
+      </trans-unit>
+      <trans-unit id="Yes">
+        <source>Yes</source>
+        <target>是</target>
+        <note>Yes answer</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
